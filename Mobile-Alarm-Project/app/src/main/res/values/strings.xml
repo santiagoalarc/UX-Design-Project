@@ -8,4 +8,6 @@
     <string name="quick">Quick Alarm</string>
     <string name="main">AlarmFit</string>
     <string name="default_time">07:00</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
 </resources>

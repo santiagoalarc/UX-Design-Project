@@ -11,4 +11,6 @@
     <color name="accent">#3C6997</color>
     <color name="warning">#F4584E</color>
     <color name="gray40">#999999</color>
+    <color name="gray10">#E5E5E5</color>
+    <color name="gray5">#F2F2F2</color>
 </resources>

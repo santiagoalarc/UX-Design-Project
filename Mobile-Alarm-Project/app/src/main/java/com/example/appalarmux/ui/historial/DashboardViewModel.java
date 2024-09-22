@@ -1,4 +1,4 @@
-package com.example.appalarmux.ui.dashboard;
+package com.example.appalarmux.ui.historial;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
