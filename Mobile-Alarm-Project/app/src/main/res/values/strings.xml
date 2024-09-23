@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AppAlarmUX</string>
+    <string name="title_home">Home1</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="calendar">Calendario</string>
+    <string name="history">Historial Alarm</string>
+    <string name="quick">Quick Alarm</string>
+    <string name="main">AlarmFit</string>
+    <string name="default_time">07:00</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+</resources>
