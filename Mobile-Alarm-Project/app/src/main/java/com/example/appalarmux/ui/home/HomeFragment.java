@@ -5,15 +5,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Switch;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.appalarmux.R;
 import com.example.appalarmux.databinding.FragmentHomeBinding;
@@ -42,6 +40,11 @@ public class HomeFragment extends Fragment {
         switchCompat.setThumbTintList(ContextCompat.getColorStateList(requireContext(), R.color.accent));
         switchCompat.setTrackTintList(ContextCompat.getColorStateList(requireContext(), R.color.gray40));
 */
+
+        binding.imageView2.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(v);
+            navController.navigate(R.id.navigation_quick_alarm);
+        });
 
         Toolbar toolbar = binding.toolbar;
         toolbar.setTitleTextColor(R.color.white);

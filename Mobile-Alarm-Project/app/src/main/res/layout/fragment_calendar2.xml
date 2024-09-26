@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.exercise.ExerciseFragment">
+    android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -26,8 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="AlarmFit"
         android:fontFamily="@font/mb_plex_sans_regular"
+        android:text="Calendario"
         android:textColor="@color/white"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
@@ -49,66 +48,34 @@
         app:layout_constraintTop_toTopOf="@+id/toolbar"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textEmpecemos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/mb_plex_sans_regular"
-        android:text="Empecemos"
-        android:textColor="@color/black"
-        android:textSize="45sp"
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="352dp"
+        android:layout_height="478dp"
+        android:calendarViewShown="true"
+        android:spinnersShown="false"
+        android:theme="@style/CustomDatePicker"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.109"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.343" />
 
-    <TextView
-        android:id="@+id/textRecomendaciones"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editCalendarBut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/mb_plex_sans_regular"
-        android:text="Recomendaciones con IA"
-        android:textColor="@color/black"
-        android:textSize="22sp"
+        android:clickable="true"
+        android:backgroundTint="@color/primary"
+        android:foregroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.912"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEmpecemos"
-        app:layout_constraintVertical_bias="0.118"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageViewMic"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textRecomendaciones"
-        app:layout_constraintVertical_bias="0.276"
-        app:srcCompat="@drawable/mic_24" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
-        android:fontFamily="@font/mb_plex_sans_light_italic"
-        android:text="¡Di nos cuál es tu próximo ejercicio!"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewMic"
-        app:layout_constraintVertical_bias="0.647"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/datePicker"
+        app:layout_constraintVertical_bias="0.201"
+        app:srcCompat="@drawable/edit_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
