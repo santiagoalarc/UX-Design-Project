@@ -14,7 +14,7 @@ enter inside the `alarm-project` folder and run
 npm run start
 ```
 
-you must have node 20.x or later to run this project properly.
+you must have node `v20.17.0` or later to run this project properly.
 
 read this doc to use nvm and being able to manage multiple node versions in your local <3
 
