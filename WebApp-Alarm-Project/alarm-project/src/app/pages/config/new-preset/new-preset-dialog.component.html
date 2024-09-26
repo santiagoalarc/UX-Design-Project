@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Editar tiempo</h2>
+
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()" style="
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  ">
+  <mat-form-field>
+    <mat-label>Start DateTime</mat-label>
+    <mat-datetimepicker-toggle [for]="datetimePicker" matSuffix></mat-datetimepicker-toggle>
+    <mat-datetimepicker
+      #datetimePicker
+      type="time"
+      [openOnFocus]="true"
+      [timeInterval]="5"
+      mode="landscape"
+    ></mat-datetimepicker>
+    <input
+      required
+      matInput
+      formControlName="datetimeCtrl"
+      [matDatetimepicker]="datetimePicker"
+      autocomplete="off"/>
+  </mat-form-field>
+
+  <div mat-dialog-actions style="margin-top: 6rem">
+    <button mat-button type="submit" [disabled]="formGroup.invalid">Aceptar</button>
+    <button mat-button (click)="onCancel()">Cancelar</button>
+  </div>
+</form>

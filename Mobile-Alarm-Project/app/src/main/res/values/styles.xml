@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Tema personalizado para el DatePicker -->
+    <style name="CustomDatePicker" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Cambiar el color del texto y botones a blanco -->
+        <item name="colorAccent">@color/primary</item>
+        <item name="android:datePickerStyle">@style/CustomDatePickerStyle</item>
+        <item name="android:theme">@style/NumberPickerStyle</item>
+    </style>
+
+    <!-- Personalización específica del DatePicker -->
+    <style name="CustomDatePickerStyle" parent="android:Widget.Material.DatePicker">
+        <!-- Personalizar colores del DatePicker -->
+        <item name="android:headerBackground">@color/white</item>
+        <item name="android:colorForeground">@color/black</item>
+        <item name="android:datePickerDialogTheme">@style/CustomCalendarDayStyle</item>
+
+    </style>
+
+    <style name="CustomCalendarDayStyle" parent="TextAppearance.MaterialComponents.Body1">
+        <!-- Cambiar el tamaño del texto para los días -->
+        <!--item name="android:textSize">228sp</item--> <!-- Cambia esto al tamaño que necesites -->
+        <item name="android:textColor">@color/warning</item> <!-- Cambiar el color si es necesario -->
+    </style>
+
+    <style name="NumberPickerStyle">
+        <item name="android:textSize">40sp</item>
+    </style>
+
+</resources>

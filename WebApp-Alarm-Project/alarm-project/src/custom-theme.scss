@@ -1,0 +1,100 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define base colors
+$primary-base-color: #1E555C;  // Dark greenish-blue
+$accent-base-color: #3C6997;   // Medium blue
+$warn-base-color: #F4584E;     // Bright red-orange
+
+// Define the custom primary palette
+$primary: mat.m2-define-palette((
+  50: #e0f2f1,   // Very light version
+  100: #b2dfdb,
+  200: #80cbc4,
+  300: #4db6ac,
+  400: #26a69a,
+  500: $primary-base-color,  // Main primary color
+  600: #1a4e53,   // Slightly darker
+  700: #164649,
+  800: #123e40,
+  900: #0b2e2f,   // Darkest shade
+  contrast: (
+    500: #ffffff, // White text for readability
+    600: #ffffff,
+  ),
+));
+
+// Define the custom accent palette
+$accent: mat.m2-define-palette((
+  50: #e3f2fd,   // Very light version
+  100: #bbdefb,
+  200: #90caf9,
+  300: #64b5f6,
+  400: #42a5f5,
+  500: $accent-base-color,  // Main accent color
+  600: #336282,   // Slightly darker
+  700: #2a5673,
+  800: #224a65,
+  900: #133548,   // Darkest shade
+  contrast: (
+    500: #ffffff, // White text for readability
+    600: #ffffff,
+  ),
+));
+
+// Define the custom warn palette
+$warn: mat.m2-define-palette((
+  50: #ffebee,   // Very light version
+  100: #ffcdd2,
+  200: #ef9a9a,
+  300: #e57373,
+  400: #ef5350,
+  500: $warn-base-color,  // Main warn color
+  600: #d94f47,   // Slightly darker
+  700: #c0483f,
+  800: #a83f37,
+  900: #7e2e29,   // Darkest shade
+  contrast: (
+    500: #ffffff, // White text for readability
+    600: #ffffff,
+  ),
+));
+
+// Define the theme object using the custom palettes
+$alarm-project-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+  ),
+  density: (
+    scale: 0,
+  )
+));
+
+$nav-grey: #F2F2F2;
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+:root {
+  @include mat.all-component-themes($alarm-project-theme);
+}
+
+@import '@mat-datetimepicker/core/datetimepicker/datetimepicker-theme';
+
+@include mat-datetimepicker-theme($alarm-project-theme);
+
+// Comment out the line below if you want to use the pre-defined typography utility classes.
+// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
+// @include mat.typography-hierarchy($alarm-project-theme);
+
+// Comment out the line below if you want to use the deprecated `color` inputs.
+// @include mat.color-variants-backwards-compatibility($alarm-project-theme);

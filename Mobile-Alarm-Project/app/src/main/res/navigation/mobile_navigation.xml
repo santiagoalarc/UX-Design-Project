@@ -12,20 +12,45 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/navigation_exercise"
+        android:name="com.example.appalarmux.ui.exercise.ExerciseFragment"
+        android:label=""
+        tools:layout="@layout/fragment_exercise" />
+
+    <fragment
+        android:id="@+id/navigation_exercise2"
+        android:name="com.example.appalarmux.ui.exercise.Exercise2Fragment"
+        android:label=""
+        tools:layout="@layout/fragment_exercise2" />
+
+    <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.appalarmux.ui.historial.HistoricalFragment"
-        android:label="@string/title_dashboard"
+        android:label=""
         tools:layout="@layout/fragment_historial" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.appalarmux.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label=""
         tools:layout="@layout/fragment_notifications" />
 
     <fragment
-        android:id="@+id/navigation_notifications2"
-        android:name="com.example.appalarmux.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_calendar"
+        android:name="com.example.appalarmux.ui.calendar.CalendarFragment"
+        android:label=""
+        tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/navigation_calendar_date"
+        android:name="com.example.appalarmux.ui.calendar.Calendar2Fragment"
+        android:label=""
+        tools:layout="@layout/fragment_calendar2" />
+
+    <fragment
+        android:id="@+id/navigation_quick_alarm"
+        android:name="com.example.appalarmux.ui.quickAlarm.QuickAlarmFragment"
+        android:label=""
+        tools:layout="@layout/fragment_quick_alarm" />
+
 </navigation>

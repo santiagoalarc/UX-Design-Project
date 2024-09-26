@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>
+  Cargar nuevo sonido
+</h1>
+
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()" style="display: flex; flex-direction: column">
+  @if (mockFileName) {
+    <span style="margin: 0 auto; padding: 3rem">
+      <b>Archivo cargado:</b> {{ mockFileName }}
+    </span>
+  } @else {
+    <div style="margin: 0 auto; padding: 1rem">
+      <button mat-button type="button" (click)="uploadFile()"
+              style="width: 100%; border-radius: 1px; border-style: dashed; height: 9rem">
+        Arrastrar y soltar archivos aquí
+        <br>
+        <br>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+          <path
+            d="M440-320v-326L336-542l-56-58 200-200 200 200-56 58-104-104v326h-80ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/>
+        </svg>
+      </button>
+    </div>
+  }
+
+  <div mat-dialog-actions align="end">
+    <button mat-button [disabled]="!mockFileName" (click)="submit()">ACEPTAR</button>
+    <button mat-button (click)="onCancel()">CANCELAR</button>
+  </div>
+
+</form>

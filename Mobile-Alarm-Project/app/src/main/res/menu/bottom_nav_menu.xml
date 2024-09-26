@@ -2,10 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_exercise"
         android:icon="@drawable/directions_walk_24px"
-        android:title="@string/title_home"
-        android:iconTint="@color/warning" />
+        android:title=""/>
 
 
     <item
@@ -21,9 +20,8 @@
         android:title="@string/title_notifications" />
 
     <item
-        android:id="@+id/navigation_notifications1"
+        android:id="@+id/navigation_calendar"
         android:icon="@drawable/event_24px"
-        android:iconTint="@color/white"
-        android:title="@string/title_notifications" />
+        android:title="" />
 
 </menu>
