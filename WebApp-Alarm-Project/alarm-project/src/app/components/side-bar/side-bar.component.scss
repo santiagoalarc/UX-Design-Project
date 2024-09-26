@@ -1,0 +1,29 @@
+@import '../../../custom-theme';
+
+.sidebar {
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $nav-grey;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+mat-chip {
+  &.mat-primary {
+    background-color: $warn-base-color;
+
+    mat-icon {
+      color: white;
+    }
+  }
+}

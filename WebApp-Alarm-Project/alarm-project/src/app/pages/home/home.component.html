@@ -1,0 +1,16 @@
+<div class="home-canvas-style">
+  <div class="clock">
+    <div class="inner-clock">
+      <span style="font-size: 128px" class="home-text">
+        {{ currentTime }}
+      </span>
+      <div style="display: flex; flex-direction: column; padding-left: 2rem">
+        <span class="day-time-indicator" [style]="!isAm? {'backgroundColor': 'white', 'color': 'black'} : {}">AM</span>
+        <span class="day-time-indicator" [style]="isAm? {'backgroundColor': 'white', 'color': 'black'} : {}">PM</span>
+      </div>
+    </div>
+    <span style="font-size: 32px; letter-spacing: 10px" class="home-text">
+      {{ verboseDate }}
+    </span>
+  </div>
+</div>
